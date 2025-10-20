@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card" aria-label="Glassmorphism To-Do App">
+      <header>
+        <div class="title">
+          <div class="brand">TS</div>
+          <div>
+            <h1>SnapTasks</h1>
+            <p class="lead">
+              Simple, pretty and fast — with glassmorphism vibes ✨
+            </p>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-ghost" id="clearCompleted">
+            Clear completed
+          </button>
+        </div>
+      </header>
+
+      <section class="input-row" aria-labelledby="new-task">
+        <input
+          id="newTask"
+          type="text"
+          placeholder="Add a new task and press Enter..."
+          aria-label="New task input"
+        />
+        <button id="addBtn" class="btn btn-primary">Add</button>
+      </section>
+
+      <ul id="tasks" class="list" aria-live="polite"></ul>
+
+      <div id="empty" class="empty" style="display: none">
+        No tasks yet — add your first one ✍️
+      </div>
+
+      <div class="controls">
+        <div><span id="count">0</span> tasks</div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="active">Active</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+        <div>
+          <button id="clearAll" class="btn btn-ghost">Clear all</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
